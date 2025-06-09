@@ -8,10 +8,14 @@ This project implements a machine learning solution for predicting solar panel e
 .
 ├── README.md
 ├── requirements.txt
+├── approach.txt
 ├── src/
 │   ├── data_exploration.py
+│   ├── data_exploration.ipynb
 │   ├── feature_engineering.py
-│   └── model_training.py
+│   ├── feature_engineering.ipynb
+│   ├── model_training.py
+│   └── model_training.ipynb
 ├── plots/
 ├── train.csv
 ├── test.csv
@@ -31,41 +35,56 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+3. Install Jupyter (if not already installed):
+```bash
+pip install jupyter
+```
+
 ## Project Components
 
-### 1. Data Exploration (`data_exploration.py`)
-- Comprehensive EDA of the dataset
-- Analysis of target variable distribution
-- Missing value analysis
-- Correlation analysis
-- Categorical variable analysis
-- Generates visualization plots in the `plots/` directory
+### 1. Data Exploration
+- **Python Script** (`data_exploration.py`): Automated EDA pipeline
+- **Jupyter Notebook** (`data_exploration.ipynb`): Interactive EDA
+- Features:
+  - Comprehensive EDA of the dataset
+  - Analysis of target variable distribution
+  - Missing value analysis
+  - Correlation analysis
+  - Categorical variable analysis
+  - Generates visualization plots in the `plots/` directory
 
-### 2. Feature Engineering (`feature_engineering.py`)
-- Advanced feature creation based on domain knowledge
-- Power-related features
-- Temperature efficiency relationships
-- Environmental impact features
-- Degradation indicators
-- Categorical feature encoding
-- Missing value handling
-- Outlier detection and treatment
+### 2. Feature Engineering
+- **Python Script** (`feature_engineering.py`): Automated feature engineering pipeline
+- **Jupyter Notebook** (`feature_engineering.ipynb`): Interactive feature engineering
+- Features:
+  - Advanced feature creation based on domain knowledge
+  - Power-related features
+  - Temperature efficiency relationships
+  - Environmental impact features
+  - Degradation indicators
+  - Categorical feature encoding
+  - Missing value handling
+  - Outlier detection and treatment
 
-### 3. Model Training (`model_training.py`)
-- Multiple model implementations:
-  - Random Forest
-  - Gradient Boosting
-  - XGBoost
-  - LightGBM
-  - Ridge Regression
-- Hyperparameter optimization using Optuna
-- Model evaluation and comparison
-- Ensemble creation using stacking
-- Feature importance analysis
-- SHAP analysis for model interpretation
+### 3. Model Training
+- **Python Script** (`model_training.py`): Automated model training pipeline
+- **Jupyter Notebook** (`model_training.ipynb`): Interactive model training
+- Features:
+  - Multiple model implementations:
+    - Random Forest
+    - Gradient Boosting
+    - XGBoost
+    - LightGBM
+    - Ridge Regression
+  - Hyperparameter optimization using Optuna
+  - Model evaluation and comparison
+  - Ensemble creation using stacking
+  - Feature importance analysis
+  - SHAP analysis for model interpretation
 
 ## Usage
 
+### Using Python Scripts
 1. Run the data exploration:
 ```bash
 python src/data_exploration.py
@@ -75,6 +94,17 @@ python src/data_exploration.py
 ```bash
 python src/model_training.py
 ```
+
+### Using Jupyter Notebooks
+1. Start Jupyter:
+```bash
+jupyter notebook
+```
+
+2. Navigate to the `src` directory and open any of the notebooks:
+   - `data_exploration.ipynb`
+   - `feature_engineering.ipynb`
+   - `model_training.ipynb`
 
 ## Model Performance
 
@@ -112,6 +142,11 @@ The ensemble model combines the best performing individual models to achieve opt
    - Feature importance analysis
    - SHAP analysis
    - Performance metrics
+
+5. **Interactive Development**
+   - Jupyter notebooks for interactive development
+   - Python scripts for automated pipelines
+   - Comprehensive documentation
 
 ## Contributing
 
